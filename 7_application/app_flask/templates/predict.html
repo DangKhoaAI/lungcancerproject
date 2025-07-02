@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Lung Cancer</title>
+</head>
+<body>
+    <h1>Predict Lung Cancer</h1>
+    <form method="POST">
+        <label for="AGE">Age:</label>
+        <input type="number" id="AGE" name="AGE" required><br><br>
+        <label for="GENDER">Gender (0 for female, 1 for male):</label>
+        <input type="number" id="GENDER" name="GENDER" min="0" max="1" required><br><br>
+        <label for="SMOKING">Smoking (0 for no, 1 for yes):</label>
+        <input type="number" id="SMOKING" name="SMOKING" min="0" max="1" required><br><br>
+        <label for="FINGER_DISCOLORATION">Finger Discoloration (0 for no, 1 for yes):</label>
+        <input type="number" id="FINGER_DISCOLORATION" name="FINGER_DISCOLORATION" min="0" max="1" required><br><br>
+        <label for="MENTAL_STRESS">Mental Stress (0 for no, 1 for yes):</label>
+        <input type="number" id="MENTAL_STRESS" name="MENTAL_STRESS" min="0" max="1" required><br><br>
+        <label for="EXPOSURE_TO_POLLUTION">Exposure to Pollution (0 for no, 1 for yes):</label>
+        <input type="number" id="EXPOSURE_TO_POLLUTION" name="EXPOSURE_TO_POLLUTION" min="0" max="1" required><br><br>
+        <label for="LONG_TERM_ILLNESS">Long-Term Illness (0 for no, 1 for yes):</label>
+        <input type="number" id="LONG_TERM_ILLNESS" name="LONG_TERM_ILLNESS" min="0" max="1" required><br><br>
+        <label for="ENERGY_LEVEL">Energy Level:</label>
+        <input type="number" id="ENERGY_LEVEL" name="ENERGY_LEVEL" step="any" required><br><br>
+        <label for="IMMUNE_WEAKNESS">Immune Weakness (0 for no, 1 for yes):</label>
+        <input type="number" id="IMMUNE_WEAKNESS" name="IMMUNE_WEAKNESS" min="0" max="1" required><br><br>
+        <label for="BREATHING_ISSUE">Breathing Issue (0 for no, 1 for yes):</label>
+        <input type="number" id="BREATHING_ISSUE" name="BREATHING_ISSUE" min="0" max="1" required><br><br>
+        <label for="ALCOHOL_CONSUMPTION">Alcohol Consumption (0 for no, 1 for yes):</label>
+        <input type="number" id="ALCOHOL_CONSUMPTION" name="ALCOHOL_CONSUMPTION" min="0" max="1" required><br><br>
+        <label for="THROAT_DISCOMFORT">Throat Discomfort (0 for no, 1 for yes):</label>
+        <input type="number" id="THROAT_DISCOMFORT" name="THROAT_DISCOMFORT" min="0" max="1" required><br><br>
+        <label for="OXYGEN_SATURATION">Oxygen Saturation:</label>
+        <input type="number" id="OXYGEN_SATURATION" name="OXYGEN_SATURATION" step="any" required><br><br>
+        <label for="CHEST_TIGHTNESS">Chest Tightness (0 for no, 1 for yes):</label>
+        <input type="number" id="CHEST_TIGHTNESS" name="CHEST_TIGHTNESS" min="0" max="1" required><br><br>
+        <label for="FAMILY_HISTORY">Family History of Lung Cancer (0 for no, 1 for yes):</label>
+        <input type="number" id="FAMILY_HISTORY" name="FAMILY_HISTORY" min="0" max="1" required><br><br>
+        <label for="SMOKING_FAMILY_HISTORY">Family History of Smoking (0 for no, 1 for yes):</label>
+        <input type="number" id="SMOKING_FAMILY_HISTORY" name="SMOKING_FAMILY_HISTORY" min="0" max="1" required><br><br>
+        <label for="STRESS_IMMUNE">Stress and Immune System (0 for no, 1 for yes):</label>
+        <input type="number" id="STRESS_IMMUNE" name="STRESS_IMMUNE" min="0" max="1" required><br><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction is not none %}
+        <h2>Prediction: {% if prediction == 1 %}High Risk of Lung Cancer{% else %}Low Risk of Lung Cancer{% endif %}</h2>
+    {% endif %}
+</body>
+</html>
