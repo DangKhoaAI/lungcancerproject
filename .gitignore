@@ -3,3 +3,5 @@ __pycache__/
 .env
 .venv/
 ai_instrucsion/
+.ipynb_checkpoints/
+.virtual_documents/

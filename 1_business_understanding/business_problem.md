@@ -1,1 +1,0 @@
-Predict likelihood of lung cancer based on patient lifestyle and health factors.
