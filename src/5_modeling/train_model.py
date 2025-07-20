@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 
 # Load the cleaned dataset
-df = pd.read_csv('/mnt/data/FPTStudy/Semester4/DAP391m/project/lung_cancer_project/data/processed/lung_cancer_cleaned.csv')
+df = pd.read_csv('../data/processed/lung_cancer_cleaned.csv')
 
 # Define features (X) and target (y)
 X = df.drop('PULMONARY_DISEASE', axis=1)
@@ -19,7 +19,7 @@ model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
 # Save the trained model to a file
-with open('/mnt/data/FPTStudy/Semester4/DAP391m/project/lung_cancer_project/5_modeling/model.pkl', 'wb') as f:
+with open('../src/5_modeling/model/model.pkl', 'wb') as f:
     pickle.dump(model, f)
 
 print("Model training complete. Model saved to 5_modeling/model.pkl")

@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
 # Load the dataset
-df = pd.read_csv('data/raw/luncgancerdataset.csv')
+df = pd.read_csv('data/raw/cancerpatientdatasets.csv')
 
 # Drop rows with missing values (if any)
 df.dropna(inplace=True)
@@ -19,7 +19,7 @@ for col in categorical_cols:
         df[col] = df[col].astype('category').cat.codes
 
 # Normalize numerical features
-numerical_cols = ['AGE', 'ENERGY_LEVEL', 'OXYGEN_SATURATION']
+numerical_cols = ['AGE']
 scaler = MinMaxScaler()
 df[numerical_cols] = scaler.fit_transform(df[numerical_cols])
 
